@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <!--会话：类似于数据库连接-->
+ <session-factory >
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">abc</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/abc</property>
+  <property name="hibernate.connection.username">abc</property>
+  <property name="hibernate.default_schema">abc</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  
+  <!--控制台显示SQL-->
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.format_sql">true</property>
+  
+  <!--由映射文件，自动创建表-->
+  <property name="hbm2ddl.auto">create</property>
+  
+  
+  <mapping resource="com/ljheee/crm/domain/Person.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>
